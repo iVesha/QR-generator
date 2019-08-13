@@ -1,6 +1,6 @@
 /*  https://github.com/neocotic/qrious  */
 var qr = new QRious({
-element: document.getElementById('qr'),
+//element: document.getElementById('qr'),
 })
 
 
