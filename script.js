@@ -1,6 +1,6 @@
 /*  https://github.com/neocotic/qrious  */
 var qr = new QRious({
-//element: document.getElementById('qr'),
+element: document.getElementById('qr'),
 })
 
 
@@ -31,7 +31,7 @@ qr.background = fgColVal;
 var fgAlpha = document.getElementById("myFgAlpha").value;
 qr.backgroundAlpha = fgAlpha;
 
-var Padding = document.getElementById("myPad").value;
-qr.padding = Padding;
+var mPadd = document.getElementById("myPad").value;
+qr.padding = mPadd;
 
 }
