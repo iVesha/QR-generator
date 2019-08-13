@@ -3,40 +3,7 @@
 <head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.js"></script>
 <title>QR code generator</title>
-<style>
-.QR-code {
-position: absolute;
-top : 0;
-left: 0;
-height: 100%;
-width: 50%;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.selections {
-position : absolute;
-width: 50%;
-height: 100%;
-top: 0;
-right: 0;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-}
-
-.selections > div {
-display: flex;
-flex-direction: row;
-margin-bottom : 5%;
-}
-
-.selections > div > p {
-margin-right: 10%;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -66,36 +33,30 @@ margin-right: 10%;
 <input type="text" id="myInp" value="" onchange="getSelectedValue()">
 </div>
 
+<div><p>Size</p>
+<input type="text" id="mySize" value="100" onchange="getSelectedValue()">
+</div>
+
+<div><p>Background Color</p>
+<input type="text" id="myBgColor" value="white" onchange="getSelectedValue()">
+<p>Background Alpha</p>
+<input type="text" id="myBgAlpha" value="1" onchange="getSelectedValue()">
+</div>
+
+<div><p>Foreground Color</p>
+<input type="text" id="myFgColor" value="black" onchange="getSelectedValue()">
+<p>Foreground Alpha</p>
+<input type="text" id="myFgAlpha" value="1" onchange="getSelectedValue()">
+</div>
+
+<div><p>Padding</p>
+<input type="text" id="mypad" value="0" onchange="getSelectedValue()">
+</div>
+
 </div>
 
 
-<script>
-/*  https://github.com/neocotic/qrious  */
-var qr = new QRious({
-element: document.getElementById('qr'),
-size: 300,
-background: 'white',
-backgroundAlpha: 0,
-foreground: 'black',
-foregroundAlpha: 1,
-padding: 5,
-})
-
-
-
-function getSelectedValue() {
-
-var levelVal = document.getElementById("levelList").value;
-qr.level = levelVal;
-
-var mimeVal = document.getElementById("mimeList").value;
-qr.mime = mimeVal;
-
-var valueVal = document.getElementById("myInp").value;
-qr.value = valueVal;
-
-}
-</script>
+<script src="script.js"></script>
 </body>
 </html>
 

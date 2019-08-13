@@ -1,0 +1,33 @@
+.QR-code {
+position: absolute;
+top : 0;
+left: 0;
+height: 100%;
+width: 40%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.selections {
+position : absolute;
+width: 60%;
+height: 100%;
+top: 0;
+right: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.selections > div {
+display: flex;
+flex-direction: row;
+margin-bottom : 2%;
+}
+
+.selections > div > p {
+margin-right: 5%;
+margin-left: 10%;
+}
