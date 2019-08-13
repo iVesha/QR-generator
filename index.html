@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.js"></script>
+<title>QR code generator</title>
+<style>
+.QR-code {
+position: absolute;
+top : 0;
+left: 0;
+height: 100%;
+width: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.selections {
+position : absolute;
+width: 50%;
+height: 100%;
+top: 0;
+right: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.selections > div {
+display: flex;
+flex-direction: row;
+margin-bottom : 5%;
+}
+
+.selections > div > p {
+margin-right: 10%;
+}
+</style>
+</head>
+<body>
+
+<div class="QR-code">
+<img id="qr">
+</div>
+
+<div class="selections">
+
+<div><p>Level</p>
+<select id="levelList" onchange="getSelectedValue()">
+<option value="l">L</option>
+<option value="m">M</option>
+<option value="q">Q</option>
+<option value="h">H</option>
+</select>
+</div>
+
+<div><p>Mime</p>
+<select id="mimeList" onchange="getSelectedValue()">
+<option value="png">image/png</option>
+<option value="jpeg">image/jpeg</option>
+</select>
+</div>
+
+<div><p>Value</p>
+<input type="text" id="myInp" value="" onchange="getSelectedValue()">
+</div>
+
+</div>
+
+
+<script>
+/*  https://github.com/neocotic/qrious  */
+var qr = new QRious({
+element: document.getElementById('qr'),
+size: 300,
+background: 'white',
+backgroundAlpha: 0,
+foreground: 'black',
+foregroundAlpha: 1,
+padding: 5,
+})
+
+
+
+function getSelectedValue() {
+
+var levelVal = document.getElementById("levelList").value;
+qr.level = levelVal;
+
+var mimeVal = document.getElementById("mimeList").value;
+qr.mime = mimeVal;
+
+var valueVal = document.getElementById("myInp").value;
+qr.value = valueVal;
+
+}
+</script>
+</body>
+</html>
+
