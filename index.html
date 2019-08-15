@@ -14,7 +14,7 @@
 <div class="selections">
 
 <div><p>Level</p>
-<select id="levelList" onchange="getSelectedValue()">
+<select id="levelList" onchange="getSelectedLevel()">
 <option value="L">L</option>
 <option value="M">M</option>
 <option value="Q">Q</option>
@@ -23,7 +23,7 @@
 </div>
 
 <div><p>Mime</p>
-<select id="mimeList" onchange="getSelectedValue()">
+<select id="mimeList" onchange="getSelectedMime()">
 <option value="png">image/png</option>
 <option value="jpeg">image/jpeg</option>
 </select>
@@ -34,23 +34,23 @@
 </div>
 
 <div><p>Size</p>
-<input type="text" id="mySize" value="100" onchange="getSelectedValue()">
+<input type="text" id="mySize" value="100" onchange="getSelectedSize()">
 </div>
 
 <div><p>Background Color</p>
-<input type="text" id="myBgColor" value="white" onchange="getSelectedValue()">
+<input type="text" id="myBgColor" value="white" onchange="getSelectedBgCol()">
 <p>Background Alpha</p>
-<input type="text" id="myBgAlpha" value="1.0" onchange="getSelectedValue()">
+<input type="text" id="myBgAlpha" value="1.0" onchange="getSelectedBgAlp()">
 </div>
 
 <div><p>Foreground Color</p>
-<input type="text" id="myFgColor" value="black" onchange="getSelectedValue()">
+<input type="text" id="myFgColor" value="black" onchange="getSelectedFgCol()">
 <p>Foreground Alpha</p>
-<input type="text" id="myFgAlpha" value="1.0" onchange="getSelectedValue()">
+<input type="text" id="myFgAlpha" value="1.0" onchange="getSelectedFgAlp()">
 </div>
 
 <div><p>Padding</p>
-<input type="text" id="myPad" value="auto" onchange="getSelectedValue()">
+<input type="text" id="myPad" value="auto" onchange="getSelectedPadding()">
 </div>
 
 </div>
